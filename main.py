@@ -14,6 +14,7 @@ async def on_ready():
         (ID: {user.user.id})''')
   elif not FirstLogin:
       print(f'Welcome Back {user.user.name}!')
+      await user.change_presence(activity=presence)
 
 @user.event
 async def on_message(message):
